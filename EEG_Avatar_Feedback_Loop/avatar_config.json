@@ -1,0 +1,55 @@
+{
+    "video": {
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": "mp4"
+    },
+    "emotion_mapping": {
+        "low_attention": "😴",
+        "medium_attention": "😊",
+        "high_attention": "🎯"
+    },
+    "caption_templates": {
+        "low_attention": "Attention needed! Let's focus...",
+        "medium_attention": "Good progress! Keep it up!",
+        "high_attention": "Excellent focus! You're doing great!"
+    },
+    "overlay": {
+        "opacity": 0.8,
+        "position": {
+            "emoji": {
+                "x": 30,
+                "y": 30,
+                "size": 60
+            },
+            "caption": {
+                "x": 30,
+                "y": 100,
+                "size": 30
+            }
+        },
+        "colors": {
+            "text": [255, 255, 255],
+            "background": [30, 30, 30]
+        }
+    },
+    "face_mesh": {
+        "max_num_faces": 1,
+        "min_detection_confidence": 0.5,
+        "min_tracking_confidence": 0.5
+    },
+    "lip_sync": {
+        "model_path": "models/lip_sync.pth",
+        "audio_window": 0.2,
+        "smoothing_factor": 0.3
+    },
+    "emotion": {
+        "model_path": "models/emotion.pth",
+        "thresholds": {
+            "low": 0.3,
+            "high": 0.7
+        },
+        "update_rate": 0.5
+    }
+} 

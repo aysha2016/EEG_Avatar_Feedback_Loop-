@@ -1,0 +1,54 @@
+{
+    "board_id": 0,  // Cyton board
+    "serial_port": "/dev/ttyUSB0",
+    "sample_rate": 250,
+    "window_size": 4,
+    "overlap": 0.5,
+    "bands": {
+        "delta": [0.5, 4],
+        "theta": [4, 8],
+        "alpha": [8, 13],
+        "beta": [13, 30],
+        "gamma": [30, 45]
+    },
+    "attention_threshold": 0.6,
+    "preprocessing": {
+        "notch_filter": {
+            "enabled": true,
+            "frequency": 50,
+            "quality_factor": 30
+        },
+        "bandpass_filter": {
+            "enabled": true,
+            "low_freq": 0.5,
+            "high_freq": 45.0,
+            "order": 4
+        },
+        "denoising": {
+            "enabled": true,
+            "wavelet": "db4",
+            "level": 3
+        }
+    },
+    "feature_extraction": {
+        "time_domain": [
+            "mean",
+            "std",
+            "kurtosis",
+            "skewness"
+        ],
+        "frequency_domain": [
+            "band_power",
+            "relative_power",
+            "peak_frequency"
+        ]
+    },
+    "model": {
+        "type": "cnn",
+        "path": "models/attention_cnn.pth",
+        "input_size": 64,
+        "hidden_size": 128,
+        "num_layers": 2,
+        "dropout": 0.5
+    }
+} 
