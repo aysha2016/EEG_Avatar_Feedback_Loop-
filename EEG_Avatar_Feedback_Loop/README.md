@@ -101,21 +101,4 @@ The system maintains comprehensive logs and metrics:
 - `AvatarProcessor`: Manages avatar display and feedback
 - `FeedbackSystem`: Integrates EEG and avatar components
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- BrainFlow for EEG data acquisition
-- MediaPipe for face mesh detection
-- PyTorch for deep learning models
-- OpenCV for video processing 
+ 
